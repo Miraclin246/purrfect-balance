@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purrfect Balance</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Purrfect Balance</h1>
+  </header>
+
+  <!-- Layout -->
+  <div class="layout">
+    <!-- Main Content -->
+    <main>
+      <section class="card">
+        <h2>Net Income</h2>
+        <input type="number" id="net-income" placeholder="Enter monthly income">
+        <button id="set-income">Set Income</button>
+        <p>Total Net Income: <span id="income-display">₹0</span></p>
+      </section>
+
+      <section class="card">
+        <h2>Current Balance: <span id="balance">₹0</span></h2>
+      </section>
+
+      <section class="card">
+        <h2>Add Transaction</h2>
+        <input type="text" id="description" placeholder="Enter description">
+        <input type="number" id="amount" placeholder="Enter amount">
+        <select id="category">
+          <option value="Fixed">Fixed</option>
+          <option value="Variable">Variable</option>
+          <option value="Irregular">Irregular</option>
+        </select>
+        <button id="add-btn">Add Transaction</button>
+      </section>
+
+      <section class="card">
+        <h2>View Transactions</h2>
+        <select id="time-filter">
+          <option value="all">All</option>
+          <option value="week">This Week</option>
+          <option value="month">This Month</option>
+          <option value="year">This Year</option>
+        </select>
+      </section>
+
+      <section class="card">
+        <h2>Transaction History</h2>
+        <ul id="transaction-list"></ul>
+      </section>
+
+      <section class="card">
+        <h2>Savings Goals</h2>
+        <input type="text" id="goal-name" placeholder="Goal name">
+        <input type="number" id="goal-amount" placeholder="Target amount">
+        <button id="add-goal">Add Goal</button>
+        <ul id="goal-list"></ul>
+      </section>
+    </main>
+
+    <!-- Cat Section -->
+    <aside class="cat-section">
+      <div id="cat-message" class="cat-feedback">
+        Your chibi accountant cat will give reports here!
+      </div>
+      <img src="images/accountant-cat.png" alt="Chibi Accountant Cat" id="cat-img">
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
